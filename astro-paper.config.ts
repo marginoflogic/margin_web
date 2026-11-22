@@ -34,6 +34,6 @@ export default defineAstroPaperConfig({
     { name: "mail", mailto: "MarginOfLogic@protonmail.com" },
   ],
   shareLinks: [
-   { name: "mail",     url: "mailto:MarginOfLogic@protonmail.com" },
+   {name: "mail", url: "mailto:MarginOfLogic@protonmail.com"},
   ],
 });
