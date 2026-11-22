@@ -31,8 +31,7 @@ export default defineAstroPaperConfig({
     { name: "instagram",   url: "https://www.instagram.com/margin_of_logic" },
     { name: "facebook",        url: "https://www.facebook.com/profile.php?id=61595864072660" },
     { name: "youtube", url: "https://www.youtube.com/@MarginofLogic" },
-    { name: "mail", mailto: "MarginOfLogic@protonmail.com" },
-  ],
+   ],
   shareLinks: [
    {name: "mail", url: "mailto:MarginOfLogic@protonmail.com"},
   ],
