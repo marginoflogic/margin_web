@@ -1,0 +1,91 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Main from "@/components/Main.astro";
+---
+
+<Layout title="Q&A | Margin of Logic">
+  <Header />
+  <Main
+    pageTitle="Q&A"
+    pageDesc="Submit a market mechanics question or suggest a topic for future educational content."
+  >
+    <div class="max-w-2xl">
+      <p class="mb-6 text-sm leading-relaxed opacity-80">
+        Note: Submitted questions may be addressed as general educational topics
+        in future posts or videos. Individual investment advice and personalized
+        trading recommendations are not provided.
+      </p>
+
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="flex flex-col gap-5"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="VAS_WEB3FORMS_KLUC"
+        />
+        <input
+          type="hidden"
+          name="access_key"
+          value="71b2cd72-5c28-4670-8e08-ac201aaf5fff"
+        />
+        <!-- Skryté pole proti spam botom -->
+        <input type="checkbox" name="botcheck" class="hidden" />
+
+        <div>
+          <label for="name" class="mb-1.5 block text-sm font-medium">
+            Name or Alias <span class="opacity-60">(optional)</span>
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            class="border-border bg-background w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="mb-1.5 block text-sm font-medium">
+            Email <span class="opacity-60">(optional, if you expect a reply)</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            class="border-border bg-background w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent"
+          />
+        </div>
+
+        <div>
+          <label for="message" class="mb-1.5 block text-sm font-medium">
+            Question or Topic <span class="text-accent">*</span>
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            placeholder="Describe your question..."
+            class="border-border bg-background w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-accent"
+          ></textarea>
+        </div>
+
+        <div>
+          <button
+            type="submit"
+            class="border-accent text-accent hover:bg-accent hover:text-background cursor-pointer rounded-md border px-5 py-2 text-sm font-medium transition-colors"
+          >
+            Submit Question
+          </button>
+        </div>
+      </form>
+    </div>
+  </Main>
+  <Footer />
+</Layout>
