@@ -209,3 +209,12 @@ const isActive = (path: string) => {
         target.focus();
         target.scrollIntoView();
       }
+    });
+  }
+
+  toggleNav();
+  document.addEventListener("astro:after-swap", toggleNav);
+
+  handleSkipToContent();
+  document.addEventListener("astro:after-swap", handleSkipToContent);
+</script>
