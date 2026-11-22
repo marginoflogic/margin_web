@@ -19,27 +19,38 @@ const currentYear = new Date().getFullYear();
   class:list={["app-layout", { "mt-auto": !noMarginTop }, className]}
   {...attrs}
 >
-  <div
-    class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"
-  >
-    <div class="flex items-center gap-1">
-      <Socials />
-      <LinkButton
-        href={`${import.meta.env.BASE_URL.replace(/\/?$/, "/")}rss.xml`}
-        class="p-2 hover:rotate-6 sm:p-1"
-        title="RSS Feed"
-        aria-label="RSS Feed"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <IconRss class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" />
-        <span class="sr-only">RSS Feed</span>
-      </LinkButton>
+  <div class="border-border border-t py-6 sm:py-4">
+    <div
+      class="flex flex-col items-center justify-between sm:flex-row-reverse"
+    >
+      <div class="flex items-center gap-1">
+        <Socials />
+        <LinkButton
+          href={`${import.meta.env.BASE_URL.replace(/\/?$/, "/")}rss.xml`}
+          class="p-2 hover:rotate-6 sm:p-1"
+          title="RSS Feed"
+          aria-label="RSS Feed"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <IconRss class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" />
+          <span class="sr-only">RSS Feed</span>
+        </LinkButton>
+      </div>
+      <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
+        <span>{t.footer.copyright} &#169; {currentYear}</span>
+        <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
+        <span>{t.footer.allRightsReserved}</span>
+      </div>
     </div>
-    <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
-      <span>{t.footer.copyright} &#169; {currentYear}</span>
-      <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
-      <span>{t.footer.allRightsReserved}</span>
-    </div>
+
+    <p class="mt-4 text-center text-xs leading-relaxed opacity-70 sm:text-left">
+      Disclaimer: All content published on this website—including market analyses,
+      technical trade ideas, performance reviews, and educational materials—is
+      provided strictly for informational and educational purposes only. It does
+      not constitute investment advice, financial recommendations, or trading
+      signals. Trading financial instruments involves significant risk and may
+      result in the loss of capital.
+    </p>
   </div>
 </footer>
