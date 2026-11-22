@@ -13,22 +13,29 @@
 /* Light theme values */
 :root,
 [data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
-  --accent-foreground: #ffffff;
-  --muted: #e6e6e6;
-  --muted-foreground: #6b7280;
-  --border: #ece9e9;
+  --background: #c5a880;
+  --foreground: #0b192c;
+  --accent: #0b192c;
+  --accent-foreground: #c5a880;
+  --muted: #b3956d;
+  --muted-foreground: #b0b3b8;
+  --border: #0b192c;
 }
 
 /* Dark theme values */
 [data-theme="dark"] {
   --background: #0b192c;
-  --foreground: #ffffff;
+  --foreground: #b0b3b8;
   --accent: #c5a880;
   --accent-foreground: #0b192c;
   --muted: #16263d;
   --muted-foreground: #b0b3b8;
   --border: #c5a880;
+}
+
+/* Hlavné nadpisy v tmavom režime na zlatú */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+  color: #c5a880;
 }
