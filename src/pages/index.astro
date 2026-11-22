@@ -10,6 +10,7 @@ import LinkButton from "@/components/LinkButton.astro";
 import { getSortedPosts } from "@/utils/getSortedPosts";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
+import { igPosts } from "@/data/igPosts";
 
 const { posts: postsConfig } = config;
 
@@ -21,6 +22,7 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 const homePath = getRelativeLocaleUrl(locale, "");
+const latestIgPosts = igPosts.slice(0, 3);
 ---
 
 <Layout>
@@ -37,47 +39,97 @@ const homePath = getRelativeLocaleUrl(locale, "");
       </p>
     </section>
 
-    {
-      featuredPosts.length > 0 && (
-        <section
-          id="featured"
-          class:list={[
-            "pt-8 pb-6",
-            { "border-border border-b": recentPosts.length > 0 },
-          ]}
-        >
-          <h2 class="text-2xl font-semibold tracking-wide">
-            {t.home.featured}
-          </h2>
-          <ul>
-            {featuredPosts.map(data => (
-              <Card variant="h3" {...data} />
-            ))}
-          </ul>
-        </section>
-      )
-    }
+    <div class="grid grid-cols-1 gap-10 py-8 lg:grid-cols-3">
+      <!-- Ľavý stĺpec: Články a mesačné vyhodnotenia (2/3 šírky) -->
+      <div class="lg:col-span-2">
+        {
+          featuredPosts.length > 0 && (
+            <section
+              id="featured"
+              class:list={[
+                "pb-6",
+                { "border-border border-b": recentPosts.length > 0 },
+              ]}
+            >
+              <h2 class="text-2xl font-semibold tracking-wide">
+                {t.home.featured}
+              </h2>
+              <ul>
+                {featuredPosts.map(data => (
+                  <Card variant="h3" {...data} />
+                ))}
+              </ul>
+            </section>
+          )
+        }
 
-    {
-      recentPosts.length > 0 && (
-        <section id="recent-posts" class="pt-8 pb-6">
-          <h2 class="text-2xl font-semibold tracking-wide">
-            {t.home.recentPosts}
-          </h2>
-          <ul>
-            {recentPosts.slice(0, postsConfig.perIndex).map(data => (
-              <Card variant="h3" {...data} />
-            ))}
-          </ul>
-        </section>
-      )
-    }
+        {
+          recentPosts.length > 0 && (
+            <section id="recent-posts" class="pt-8 pb-6">
+              <h2 class="text-2xl font-semibold tracking-wide">
+                {t.home.recentPosts}
+              </h2>
+              <ul>
+                {recentPosts.slice(0, postsConfig.perIndex).map(data => (
+                  <Card variant="h3" {...data} />
+                ))}
+              </ul>
+            </section>
+          )
+        }
 
-    <div class="my-8 text-center">
-      <LinkButton href={getRelativeLocaleUrl(locale, "posts")}>
-        {t.home.allPosts}
-        <IconArrowRight class="inline-block rtl:-rotate-180" />
-      </LinkButton>
+        <div class="my-8 text-center">
+          <LinkButton href={getRelativeLocaleUrl(locale, "posts")}>
+            {t.home.allPosts}
+            <IconArrowRight class="inline-block rtl:-rotate-180" />
+          </LinkButton>
+        </div>
+      </div>
+
+      <!-- Pravý stĺpec: Instagram Reels feed (1/3 šírky) -->
+      <aside class="border-border border-t pt-8 lg:border-t-0 lg:border-s lg:ps-8 lg:pt-0">
+        <h2 class="mb-6 text-2xl font-semibold tracking-wide">
+          Instagram Reels
+        </h2>
+        <div class="flex flex-col gap-6">
+          {
+            latestIgPosts.map(post => (
+              <article class="border-border border-b pb-5 last:border-b-0">
+                <a
+                  href={post.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group block overflow-hidden rounded-md border border-border"
+                >
+                  <img
+                    src={post.image}
+                    alt="Instagram Reel Hook Slide"
+                    class="aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </a>
+                <p class="mt-2 text-xs opacity-60">{post.date}</p>
+                <p class="mt-1 text-sm leading-relaxed">{post.preview}</p>
+                {post.moreText && (
+                  <details class="mt-1 text-sm">
+                    <summary class="text-accent cursor-pointer list-none font-medium hover:underline">
+                      more
+                    </summary>
+                    <p class="mt-2 leading-relaxed opacity-90">
+                      {post.moreText}
+                    </p>
+                  </details>
+                )}
+              </article>
+            ))
+          }
+        </div>
+        <div class="mt-6 text-center">
+          <LinkButton href={getRelativeLocaleUrl(locale, "reels")}>
+            More Reels
+            <IconArrowRight class="inline-block rtl:-rotate-180" />
+          </LinkButton>
+        </div>
+      </aside>
     </div>
   </main>
   <Footer />
