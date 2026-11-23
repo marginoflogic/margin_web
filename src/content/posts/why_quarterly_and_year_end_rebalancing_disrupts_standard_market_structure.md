@@ -14,38 +14,50 @@ description: "Why standard technical setups fail during quarter-end and year-end
 
 Some of the most expensive structural errors in retail trading happen on a predictable calendar schedule. As the financial markets move through late November and approach the end of the fourth quarter, trading conditions shift significantly. The final weeks of the year—and the closing days of every quarter—do not operate like standard trading sessions. Attempting to apply routine technical setups during these periods exposes capital to distorted market mechanics.
 
-<div style="margin: 2rem 0;">
-<svg viewBox="0 0 760 300" width="760" height="300" style="width: 100%; height: auto; max-width: 720px; border-radius: 10px; border: 1px solid #1e293b; display: block;" role="img" aria-label="Diagram illustrating Quarter-End and Year-End Institutional Rebalancing versus Thinning Order Book Depth">
-  <rect x="0" y="0" width="760" height="300" rx="10" fill="#0b1221" />
-  <text x="28" y="32" fill="#eab308" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="600" letter-spacing="1.4">MARKET MECHANICS // CALENDAR LIQUIDITY DISTORTION</text>
-  <text x="28" y="53" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="600">Quarter-End &amp; Year-End Rebalancing vs. Order Book Depth</text>
-  <line x1="28" y1="68" x2="732" y2="68" stroke="#1e293b" stroke-width="1" />
-  <line x1="40" y1="235" x2="395" y2="235" stroke="#334155" stroke-width="1.5" />
-  <text x="125" y="92" text-anchor="middle" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10">Depth Absorbs Flow</text>
-  <rect x="78" y="105" width="42" height="130" rx="3" fill="#172e4d" stroke="#38bdf8" stroke-width="1.2" />
-  <rect x="130" y="155" width="42" height="80" rx="3" fill="#1e293b" stroke="#94a3b8" stroke-width="1" />
-  <text x="125" y="254" text-anchor="middle" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11">Standard Session</text>
-  <text x="300" y="84" text-anchor="middle" fill="#eab308" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="600">Liquidity Deficit → Distortion</text>
-  <rect x="253" y="95" width="42" height="80" rx="3" fill="#eab308" fill-opacity="0.08" stroke="#eab308" stroke-width="1" stroke-dasharray="3,2" />
-  <rect x="253" y="180" width="42" height="55" rx="3" fill="#1e293b" stroke="#64748b" stroke-width="1" />
-  <rect x="305" y="95" width="42" height="140" rx="3" fill="#422006" stroke="#eab308" stroke-width="1.5" />
-  <text x="300" y="254" text-anchor="middle" fill="#eab308" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="600">Quarter / Year-End</text>
-  <rect x="40" y="272" width="10" height="10" rx="2" fill="#172e4d" stroke="#38bdf8" stroke-width="1" />
-  <text x="56" y="281" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10.5">Order Book Depth</text>
-  <rect x="168" y="272" width="10" height="10" rx="2" fill="#422006" stroke="#eab308" stroke-width="1" />
-  <text x="184" y="281" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="10.5">Mandatory Calendar Volume</text>
-  <line x1="422" y1="84" x2="422" y2="282" stroke="#1e293b" stroke-width="1" />
-  <rect x="442" y="88" width="290" height="54" rx="6" fill="#111b30" stroke="#1e293b" stroke-width="1" />
-  <text x="456" y="108" fill="#eab308" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="600">01 / MANDATORY DEADLINES</text>
-  <text x="456" y="127" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">Fixed asset allocation &amp; tax cutoffs</text>
-  <rect x="442" y="154" width="290" height="54" rx="6" fill="#111b30" stroke="#1e293b" stroke-width="1" />
-  <text x="456" y="174" fill="#eab308" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="600">02 / DECLINING BOOK DEPTH</text>
-  <text x="456" y="193" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">Desks close books; spreads widen sharply</text>
-  <rect x="442" y="220" width="290" height="54" rx="6" fill="#111b30" stroke="#1e293b" stroke-width="1" />
-  <text x="456" y="240" fill="#eab308" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="600">03 / COUNTERPARTY ABSORPTION</text>
-  <text x="456" y="259" fill="#cbd5e1" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">Retail breakouts fill institutional block orders</text>
+<svg viewBox="0 0 840 430" width="840" height="430" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid #1e293b; display: block; margin: 1.75rem 0;" role="img" aria-label="Diagram illustrating Quarter-End and Year-End Institutional Rebalancing versus Thinning Order Book Depth">
+  <rect x="0" y="0" width="840" height="430" rx="12" fill="#0b1221" />
+  <text x="32" y="42" fill="#eab308" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="14" font-weight="700" letter-spacing="1.5">MARKET MECHANICS // CALENDAR LIQUIDITY DISTORTION</text>
+  <text x="32" y="72" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="700">Quarter-End &amp; Year-End Rebalancing vs. Order Book Depth</text>
+  <line x1="32" y1="92" x2="808" y2="92" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Left Chart Area -->
+  <line x1="40" y1="335" x2="430" y2="335" stroke="#475569" stroke-width="2" />
+
+  <!-- Standard Session -->
+  <text x="135" y="128" text-anchor="middle" fill="#38bdf8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="600">Depth Absorbs Flow</text>
+  <rect x="82" y="146" width="48" height="189" rx="4" fill="#172e4d" stroke="#38bdf8" stroke-width="2" />
+  <rect x="142" y="218" width="48" height="117" rx="4" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5" />
+  <text x="135" y="362" text-anchor="middle" fill="#cbd5e1" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="14" font-weight="600">Standard Session</text>
+
+  <!-- Quarter / Year-End -->
+  <text x="330" y="118" text-anchor="middle" fill="#facc15" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13.5" font-weight="700">Liquidity Deficit → Distortion</text>
+  <rect x="277" y="134" width="48" height="116" rx="4" fill="#eab308" fill-opacity="0.12" stroke="#facc15" stroke-width="1.5" stroke-dasharray="5,4" />
+  <rect x="277" y="256" width="48" height="79" rx="4" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5" />
+  <rect x="337" y="134" width="48" height="201" rx="4" fill="#422006" stroke="#facc15" stroke-width="2" />
+  <text x="330" y="362" text-anchor="middle" fill="#facc15" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="14" font-weight="700">Quarter / Year-End</text>
+
+  <!-- Legend -->
+  <rect x="44" y="388" width="14" height="14" rx="3" fill="#172e4d" stroke="#38bdf8" stroke-width="1.5" />
+  <text x="66" y="400" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">Order Book Depth</text>
+  <rect x="210" y="388" width="14" height="14" rx="3" fill="#422006" stroke="#facc15" stroke-width="1.5" />
+  <text x="232" y="400" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">Mandatory Calendar Volume</text>
+
+  <!-- Vertical Divider -->
+  <line x1="452" y1="112" x2="452" y2="404" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Right Cards Area -->
+  <rect x="472" y="114" width="336" height="84" rx="8" fill="#111b30" stroke="#1e293b" stroke-width="1.5" />
+  <text x="490" y="143" fill="#facc15" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="14" font-weight="700">01 / MANDATORY DEADLINES</text>
+  <text x="490" y="172" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="15.5">Fixed asset allocation &amp; tax cutoffs</text>
+
+  <rect x="472" y="212" width="336" height="84" rx="8" fill="#111b30" stroke="#1e293b" stroke-width="1.5" />
+  <text x="490" y="241" fill="#facc15" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="14" font-weight="700">02 / DECLINING BOOK DEPTH</text>
+  <text x="490" y="270" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="15.5">Desks close books; spreads widen sharply</text>
+
+  <rect x="472" y="310" width="336" height="84" rx="8" fill="#111b30" stroke="#1e293b" stroke-width="1.5" />
+  <text x="490" y="339" fill="#facc15" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="14" font-weight="700">03 / COUNTERPARTY ABSORPTION</text>
+  <text x="490" y="368" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="15.5">Retail breakouts fill institutional block orders</text>
 </svg>
-</div>
 
 Tier-1 banks, hedge funds, and massive pension funds manage trillions of dollars in global assets. At the end of every month, every quarter, and especially at the close of the fiscal year in Q4, these institutions face strict operational mandates. They are required to rebalance their portfolios to maintain fixed asset allocations, such as standard equity-to-bond ratios. In addition, global funds execute year-end tax adjustments, lock in annual performance metrics, and adjust balance sheets to meet regulatory capital requirements before the new year begins.
 
