@@ -84,3 +84,9 @@ import Main from "@/components/Main.astro";
   </Main>
   <Footer />
 </Layout>
+<script>
+  window.addEventListener("pageshow", () => {
+    const form = document.querySelector("form");
+    if (form) form.reset();
+  });
+</script>
