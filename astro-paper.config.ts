@@ -6,7 +6,7 @@ export default defineAstroPaperConfig({
     title: "Margin of Logic",
     description: "Mapping technical trade ideas and education on how markets really work",
     author: "Margin of Logic",
-    profile: "https://satna.ing",
+ profile: "https://margin-web-dv8.pages.dev/about",
     ogImage: "default-og.jpg",
     lang: "en",
     timezone: "Europe/Bratislava",
