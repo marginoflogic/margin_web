@@ -1,0 +1,84 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Main from "@/components/Main.astro";
+---
+
+<Layout title="Collaboration | Margin of Logic">
+  <Header />
+  <Main
+    pageTitle="Collaboration"
+    pageDesc="Analytical research access, consultations, and partnership inquiries."
+  >
+    <div class="max-w-2xl space-y-10">
+      <section>
+        <h2 class="mb-3 text-sm font-semibold">Analytical Services</h2>
+        <ul class="space-y-3 text-sm leading-relaxed">
+          <li>
+            <span class="font-medium">FX Market Outlooks &amp; Key Levels</span>
+            <span class="opacity-80">
+              &mdash; Ongoing structural analysis and key liquidity zones across
+              30 FX pairs.
+            </span>
+          </li>
+          <li>
+            <span class="font-medium"
+              >Price Level Alerts &amp; Context Updates</span
+            >
+            <span class="opacity-80">
+              &mdash; Notifications at monitored price levels paired with
+              ongoing updates on market structure and volume reaction.
+            </span>
+          </li>
+          <li>
+            <span class="font-medium">1-on-1 Consultations</span>
+            <span class="opacity-80">
+              &mdash; Individual sessions focused on risk parameters, execution
+              structure, and position management frameworks.
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="mb-3 text-sm font-semibold">Partnerships</h2>
+        <ul class="space-y-3 text-sm leading-relaxed">
+          <li>
+            <span class="font-medium">Research &amp; Media</span>
+            <span class="opacity-80">
+              &mdash; Analytical contributions, market mechanics breakdowns, and
+              B2B inquiries.
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="mb-3 text-sm font-semibold">Inquiries</h2>
+        <p class="text-sm leading-relaxed opacity-80">
+          Specify the relevant area and a brief overview of your request:
+        </p>
+        <p class="mt-2 text-sm">
+          <span class="font-semibold">Email:</span>{" "}
+          <a
+            href="mailto:MarginOfLogic@protonmail.com"
+            class="text-accent hover:underline"
+          >
+            MarginOfLogic@protonmail.com
+          </a>
+        </p>
+      </section>
+
+      <section class="border-border border-t pt-6">
+        <p class="text-xs leading-relaxed opacity-65">
+          All outputs represent general market research and educational analysis
+          of market mechanics. Nothing provided constitutes investment advice,
+          portfolio management, or solicitation. Paid services are not available
+          in sanctioned jurisdictions.
+        </p>
+      </section>
+    </div>
+  </Main>
+  <Footer />
+</Layout>
