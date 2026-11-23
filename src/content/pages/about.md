@@ -1,37 +1,98 @@
 ---
-title: "About"
-description: "A bit about me and this blog."
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Main from "@/components/Main.astro";
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+<Layout title="About | Margin of Logic">
+  <Header />
+  <Main
+    pageTitle="About"
+    pageDesc="Institutional market mechanics, liquidity structure, and analytical research across 30 FX pairs."
+  >
+    <div class="space-y-10">
+      <section>
+        <h2 class="mb-3 text-sm font-semibold">Focus &amp; Scope</h2>
+        <ul class="space-y-3 text-sm leading-relaxed">
+          <li>
+            <span class="font-medium">Market Mechanics &amp; Liquidity</span>{" "}
+            <span class="opacity-80">
+              &mdash; Analytical focus on liquidity distribution, volume
+              behavior, and the operational structure of institutional market
+              participants rather than lagging retail indicators.
+            </span>
+          </li>
+          <li>
+            <span class="font-medium">Proprietary Volume Software</span>{" "}
+            <span class="opacity-80">
+              &mdash; Market analysis supported by custom in-house software
+              engineered to detect, filter, and map volume anomalies across
+              price structures.
+            </span>
+          </li>
+          <li>
+            <span class="font-medium">30 FX Pairs Coverage</span>{" "}
+            <span class="opacity-80">
+              &mdash; Continuous structural mapping and technical evaluation
+              across 30 major and cross currency pairs.
+            </span>
+          </li>
+        </ul>
+      </section>
 
-![Astro Paper](@/assets/images/astropaper-og.jpg)
+      <section>
+        <h2 class="mb-3 text-sm font-semibold">Methodology &amp; Framing</h2>
+        <p class="text-sm leading-relaxed opacity-80">
+          Educational breakdowns and research notes examine why price moves and
+          how risk parameters are structured. Content is designed to provide
+          objective market context for independent decision-making without
+          directive trading calls.
+        </p>
+      </section>
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+      <section>
+        <h2 class="mb-3 text-sm font-semibold">Navigation</h2>
+        <ul class="space-y-2.5 text-sm">
+          <li>
+            <a href="/posts" class="text-accent font-medium hover:underline"
+              >Posts</a
+            >
+            <span class="opacity-80">
+              &mdash; Articles on market mechanics, liquidity, and volume
+              structure.
+            </span>
+          </li>
+          <li>
+            <a href="/qa" class="text-accent font-medium hover:underline"
+              >Q&amp;A</a
+            >
+            <span class="opacity-80">
+              &mdash; Answers to reader questions and topic submissions.
+            </span>
+          </li>
+          <li>
+            <a
+              href="/collaboration"
+              class="text-accent font-medium hover:underline"
+              >Collaboration</a
+            >
+            <span class="opacity-80">
+              &mdash; Analytical research access, consultations, and partnership
+              inquiries.
+            </span>
+          </li>
+        </ul>
+      </section>
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
-
-## Features
-
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
-
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
-
-and so much more.
-
-## Show your support
-
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
-
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
-
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+      <section class="border-border border-t pt-6">
+        <p class="text-xs leading-relaxed opacity-65">
+          Margin of Logic provides educational content and general market
+          research. Nothing published on this site constitutes investment
+          advice, portfolio management, or a solicitation to trade.
+        </p>
+      </section>
+    </div>
+  </Main>
+  <Footer />
+</Layout>
