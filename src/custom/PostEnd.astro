@@ -1,11 +1,21 @@
 ---
-// Rendered on each post page, after the share links and before the
-// previous/next links. Add comments, a newsletter form or an author bio
-// here; use `post` to skip some posts. This file is yours: AstroPaper
-// never changes it after release.
 import type { CollectionEntry } from "astro:content";
 
-type Props = {
+interface Props {
   post: CollectionEntry<"posts">;
-};
+}
 ---
+
+<div class="border-border my-8 rounded-md border p-5">
+  <h3 class="text-base font-semibold">Questions or feedback?</h3>
+  <p class="mt-1.5 text-sm leading-relaxed opacity-80">
+    If you have a question about the market mechanics covered in this post or
+    want to suggest a related topic, submit it directly via the Q&A form.
+  </p>
+  <a
+    href="/qa"
+    class="text-accent mt-3 inline-block text-sm font-medium hover:underline"
+  >
+    Submit a question via Q&A &rarr;
+  </a>
+</div>
