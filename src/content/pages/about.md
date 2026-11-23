@@ -1,98 +1,36 @@
 ---
+import { getEntry, render } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
 import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import config from "@/config";
+
+const about = await getEntry("pages", "about");
+
+if (!about) {
+  throw new Error(
+    "Missing content entry: `about.md` or `about.mdx` in `src/content/pages/`"
+  );
+}
+
+const { Content } = await render(about);
 ---
 
-<Layout title="About | Margin of Logic">
+<Layout
+  title={`${about.data.title} | ${config.site.title}`}
+  description={about.data.description}
+  ogImage={about.data.ogImage}
+  canonicalURL={about.data.canonicalURL}
+>
   <Header />
-  <Main
-    pageTitle="About"
-    pageDesc="Institutional market mechanics, liquidity structure, and analytical research across 30 FX pairs."
-  >
-    <div class="space-y-10">
-      <section>
-        <h2 class="mb-3 text-sm font-semibold">Focus &amp; Scope</h2>
-        <ul class="space-y-3 text-sm leading-relaxed">
-          <li>
-            <span class="font-medium">Market Mechanics &amp; Liquidity</span>{" "}
-            <span class="opacity-80">
-              &mdash; Analytical focus on liquidity distribution, volume
-              behavior, and the operational structure of institutional market
-              participants rather than lagging retail indicators.
-            </span>
-          </li>
-          <li>
-            <span class="font-medium">Proprietary Volume Software</span>{" "}
-            <span class="opacity-80">
-              &mdash; Market analysis supported by custom in-house software
-              engineered to detect, filter, and map volume anomalies across
-              price structures.
-            </span>
-          </li>
-          <li>
-            <span class="font-medium">30 FX Pairs Coverage</span>{" "}
-            <span class="opacity-80">
-              &mdash; Continuous structural mapping and technical evaluation
-              across 30 major and cross currency pairs.
-            </span>
-          </li>
-        </ul>
-      </section>
 
-      <section>
-        <h2 class="mb-3 text-sm font-semibold">Methodology &amp; Framing</h2>
-        <p class="text-sm leading-relaxed opacity-80">
-          Educational breakdowns and research notes examine why price moves and
-          how risk parameters are structured. Content is designed to provide
-          objective market context for independent decision-making without
-          directive trading calls.
-        </p>
-      </section>
+  <Breadcrumb />
 
-      <section>
-        <h2 class="mb-3 text-sm font-semibold">Navigation</h2>
-        <ul class="space-y-2.5 text-sm">
-          <li>
-            <a href="/posts" class="text-accent font-medium hover:underline"
-              >Posts</a
-            >
-            <span class="opacity-80">
-              &mdash; Articles on market mechanics, liquidity, and volume
-              structure.
-            </span>
-          </li>
-          <li>
-            <a href="/qa" class="text-accent font-medium hover:underline"
-              >Q&amp;A</a
-            >
-            <span class="opacity-80">
-              &mdash; Answers to reader questions and topic submissions.
-            </span>
-          </li>
-          <li>
-            <a
-              href="/collaboration"
-              class="text-accent font-medium hover:underline"
-              >Collaboration</a
-            >
-            <span class="opacity-80">
-              &mdash; Analytical research access, consultations, and partnership
-              inquiries.
-            </span>
-          </li>
-        </ul>
-      </section>
-
-      <section class="border-border border-t pt-6">
-        <p class="text-xs leading-relaxed opacity-65">
-          Margin of Logic provides educational content and general market
-          research. Nothing published on this site constitutes investment
-          advice, portfolio management, or a solicitation to trade.
-        </p>
-      </section>
-    </div>
+  <Main pageTitle={about.data.title} class="app-prose">
+    <Content />
   </Main>
+
   <Footer />
 </Layout>
