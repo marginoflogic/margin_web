@@ -19,6 +19,11 @@ const mailto30PC = createMailto(
   "Product: Continuous 30-Pair Coverage\r\nDuration: [3 months €250 / 6 months €450 / 12 months €650]\r\nActive Level Management (+€50): [Yes / No]\r\nPreferred Payment: [EUR / Crypto]\r\nNotes: "
 );
 
+const mailtoALM = createMailto(
+  "Order_ALM",
+  "Product: Active Level Management & Risk Support (+€50)\r\nLinked Plan: [Single Active Level / 30-Pair Coverage]\r\nPreferred Payment: [EUR / Crypto]\r\nNotes: "
+);
+
 const mailtoMC = createMailto(
   "Order_MC",
   "Product: Monthly Trading Consultation (€30/month)\r\nPreferred Payment: [EUR / Crypto]\r\nInitial Question / Topic: "
@@ -207,13 +212,22 @@ const mailtoMC = createMailto(
                   decisions remain strictly with the client
                 </li>
               </ul>
+
+              <p class="border-border border-t pt-4 text-xs leading-relaxed italic opacity-75">
+                Based on published historical statistics, active volume-based risk
+                management has improved outcome consistency by up to 30% compared
+                to passive level holding.
+              </p>
             </div>
 
-            <p class="border-border mt-6 border-t pt-4 text-xs leading-relaxed italic opacity-75">
-              Based on published historical statistics, active volume-based risk
-              management has improved outcome consistency by up to 30% compared
-              to passive level holding.
-            </p>
+            <div class="mt-6 pt-4">
+              <a
+                href={mailtoALM}
+                class="border-accent text-accent hover:bg-accent inline-block w-full rounded border px-4 py-2 text-center text-sm font-semibold transition-colors hover:text-black"
+              >
+                Request Support
+              </a>
+            </div>
           </div>
 
           <!-- Product 3: Monthly Trading Consultation -->
