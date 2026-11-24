@@ -8,6 +8,23 @@ export interface IgPost {
 
 export const igPosts: IgPost[] = [
   {
+    date: "2026-11-24",
+    image: "/ig/026-11-24.jpg",
+    url: "https://www.instagram.com/p/DgIDvOQp6cM/",
+    preview:"How higher timeframes fit a full-time work schedule.",
+    moreText: `Most retail participants in FX and cryptocurrency markets balance their trading activities alongside full-time employment. They typically attempt to trade during work breaks or in the evening. Shorter timeframes require constant screen time, which makes it practically impossible to conduct in-depth analysis or to enter and exit trades at optimal, pre-planned price levels.
+
+Retail traders in the cryptocurrency markets—which operate 24 hours a day—often monitor charts continuously; this is a psychologically demanding activity to undertake alongside a regular job. In contrast, FX market operates according to a defined institutional schedule, with clear daily market closes and predictable liquidity windows. This structure makes it significantly more compatible with a standard work week.
+
+Large funds analyze higher timeframes, where trading volumes and liquidity zones are visible. They execute trades exclusively via limit orders. For a market participant with limited daily availability, this approach offers greater convenience, allowing for occasional market monitoring that does not interfere with the fulfillment of regular professional duties. The weekend is an ideal time for in-depth study and the refinement of one’s trading strategy—or for direct preparation for trading—as the markets are closed, allowing the trader to devote their full attention exclusively to learning. During the initial stages of learning, many traders collaborate with professional traders who, in addition to trading, focus on education and community building.
+
+Since trading is a solitary activity, these connections are valuable for both parties—not to mention that an experienced trader is often happy to share, or even monetize, the skills they have acquired.
+
+However, this should be merely a transitional phase; the less experienced trader should use this time to refine their own strategy to the point where they no longer require support from a more experienced trader.
+
+#investor #forex #crypto #forextrader #trader`,
+  },
+  {
     date: "23 Nov, 2026",
     image: "/ig/2026-11-23-DgFXLPBJ6qG.jpg",
     url: "https://www.instagram.com/p/DgFXLPBJ6qG/",
