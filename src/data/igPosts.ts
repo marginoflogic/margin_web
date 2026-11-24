@@ -9,7 +9,7 @@ export interface IgPost {
 export const igPosts: IgPost[] = [
   {
     date: "2026-11-24",
-    image: "/ig/026-11-24.jpg",
+    image: "/ig/026-11-24.png",
     url: "https://www.instagram.com/p/DgIDvOQp6cM/",
     preview:"How higher timeframes fit a full-time work schedule.",
     moreText: `Most retail participants in FX and cryptocurrency markets balance their trading activities alongside full-time employment. They typically attempt to trade during work breaks or in the evening. Shorter timeframes require constant screen time, which makes it practically impossible to conduct in-depth analysis or to enter and exit trades at optimal, pre-planned price levels.
