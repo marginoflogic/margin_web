@@ -16,7 +16,7 @@ const mailtoSAL = createMailto(
 
 const mailto30PC = createMailto(
   "Order_30PC",
-  "Product: Continuous 30-Pair Coverage\r\nDuration: [3m €250 / 6m €450 / 12m €650]\r\nActive Level Management (+€50): [Yes / No]\r\nPreferred Payment: [EUR / Crypto]\r\nNotes: "
+  "Product: Continuous 30-Pair Coverage\r\nDuration: [3 months €250 / 6 months €450 / 12 months €650]\r\nActive Level Management (+€50): [Yes / No]\r\nPreferred Payment: [EUR / Crypto]\r\nNotes: "
 );
 
 const mailtoMC = createMailto(
@@ -35,7 +35,7 @@ const mailtoMC = createMailto(
       <section class="space-y-6">
         <h2 class="text-sm font-semibold">Analytical Services</h2>
 
-        <!-- Primary Level Plans (2-column grid) -->
+        <!-- Row 1: Primary Level Plans -->
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
           <!-- Product 1: Single Active Level -->
           <div class="border-border flex flex-col justify-between rounded-lg border p-5">
@@ -45,15 +45,21 @@ const mailtoMC = createMailto(
                   One-Time // Single Level
                 </p>
                 <h3 class="mt-1 text-lg font-semibold">Single Active Level</h3>
-                <p class="mt-2 text-2xl font-bold">
-                  €100 <span class="text-xs font-normal opacity-75">/ one-time</span>
-                </p>
               </div>
 
               <p class="text-sm leading-relaxed opacity-80">
                 One-time structural analysis of a single active price level
                 based on current market structure and volume flow.
               </p>
+
+              <div class="border-border border-y py-3">
+                <p class="text-2xl font-bold">
+                  €100 <span class="text-xs font-normal opacity-75">/ one-time</span>
+                </p>
+                <p class="mt-1 text-xs opacity-65">
+                  or Cryptocurrency (EUR equivalent)
+                </p>
+              </div>
 
               <ul class="list-disc space-y-2 pl-4 text-sm leading-relaxed opacity-85">
                 <li>Defined active price level based on current market structure</li>
@@ -87,28 +93,34 @@ const mailtoMC = createMailto(
                 <h3 class="mt-1 text-lg font-semibold">
                   Continuous 30-Pair Coverage
                 </h3>
-                <div class="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
-                  <span>
-                    <strong class="text-lg">€250</strong>{" "}
-                    <span class="opacity-75">/ 3m</span>
-                  </span>
-                  <span class="opacity-40">·</span>
-                  <span>
-                    <strong class="text-lg">€450</strong>{" "}
-                    <span class="opacity-75">/ 6m</span>
-                  </span>
-                  <span class="opacity-40">·</span>
-                  <span>
-                    <strong class="text-lg">€650</strong>{" "}
-                    <span class="opacity-75">/ 12m</span>
-                  </span>
-                </div>
               </div>
 
               <p class="text-sm leading-relaxed opacity-80">
                 Ongoing structural analysis and active price levels across 30
                 monitored FX pairs.
               </p>
+
+              <div class="border-border border-y py-3">
+                <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
+                  <span>
+                    <strong class="text-lg">€250</strong>{" "}
+                    <span class="opacity-75">/ 3 months</span>
+                  </span>
+                  <span class="opacity-40">·</span>
+                  <span>
+                    <strong class="text-lg">€450</strong>{" "}
+                    <span class="opacity-75">/ 6 months</span>
+                  </span>
+                  <span class="opacity-40">·</span>
+                  <span>
+                    <strong class="text-lg">€650</strong>{" "}
+                    <span class="opacity-75">/ 12 months</span>
+                  </span>
+                </div>
+                <p class="mt-1 text-xs opacity-65">
+                  or Cryptocurrency (EUR equivalent)
+                </p>
+              </div>
 
               <ul class="list-disc space-y-2 pl-4 text-sm leading-relaxed opacity-85">
                 <li>Continuous coverage of 30 FX pairs across higher timeframes</li>
@@ -136,150 +148,43 @@ const mailtoMC = createMailto(
           </div>
         </div>
 
-        <!-- Optional Add-on Block -->
-        <div class="border-accent/50 rounded-lg border p-5">
-          <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-baseline">
-            <div>
-              <p class="text-accent text-xs font-semibold tracking-wider uppercase">
-                Optional Add-On // Available for Both Level Plans
-              </p>
-              <h3 class="mt-1 text-lg font-semibold">
-                Active Level Management &amp; Risk Support
-              </h3>
-            </div>
-            <p class="text-xl font-bold whitespace-nowrap">
-              + €50 <span class="text-xs font-normal opacity-75">/ selected plan</span>
-            </p>
-          </div>
-
-          <p class="mt-3 text-sm leading-relaxed opacity-80">
-            Ongoing analytical guidance for your active price levels, continuing
-            throughout their entire lifecycle until closure. Flat fee covering
-            all active levels within your chosen plan.
-          </p>
-
-          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm leading-relaxed opacity-85">
-            <li>
-              Continuous monitoring of active price levels based on live market
-              structure and volume flow
-            </li>
-            <li>
-              Real-time alerts when new volume layers form ahead of the target
-              (signaling potential reversal or early exit zones)
-            </li>
-            <li>
-              Early warning when adverse volume accumulates against the level,
-              including objective context for risk reduction (e.g., breakeven
-              considerations)
-            </li>
-            <li>
-              Surrounding liquidity zones, volume context, and defined
-              invalidation point (Stop Loss reference)
-            </li>
-            <li>
-              Analytical guidance only; all execution and management decisions
-              remain strictly with the client
-            </li>
-          </ul>
-
-          <p class="border-border mt-4 border-t pt-3 text-xs leading-relaxed italic opacity-75">
-            Based on internal historical tracking, active volume-based risk
-            management has improved outcome consistency by up to 30% compared to
-            passive level holding.
-          </p>
-        </div>
-
-        <!-- Product 3: Monthly Trading Consultation -->
-        <div class="border-border rounded-lg border p-5">
-          <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
-            <div class="space-y-3">
+        <!-- Row 2: Add-on Support & Monthly Consultation -->
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <!-- Optional Add-on: Active Level Management -->
+          <div class="border-accent/50 flex flex-col justify-between rounded-lg border p-5">
+            <div class="space-y-4">
               <div>
                 <p class="text-accent text-xs font-semibold tracking-wider uppercase">
-                  Monthly // Email Access
+                  Optional Add-On // For Both Level Plans
                 </p>
                 <h3 class="mt-1 text-lg font-semibold">
-                  Monthly Trading Consultation
+                  Active Level Management &amp; Risk Support
                 </h3>
-                <p class="mt-1 text-xl font-bold">
-                  €30 <span class="text-xs font-normal opacity-75">/ month</span>
-                </p>
               </div>
 
               <p class="text-sm leading-relaxed opacity-80">
-                Direct email access for questions on any trading-related topic,
-                backed by 12 years of live market experience.
+                Ongoing analytical guidance for your active price levels,
+                continuing throughout their entire lifecycle until closure. Flat
+                fee covering all active levels within your chosen plan.
               </p>
+
+              <div class="border-border border-y py-3">
+                <p class="text-2xl font-bold">
+                  + €50 <span class="text-xs font-normal opacity-75">/ selected plan</span>
+                </p>
+                <p class="mt-1 text-xs opacity-65">
+                  or Cryptocurrency (EUR equivalent)
+                </p>
+              </div>
 
               <ul class="list-disc space-y-2 pl-4 text-sm leading-relaxed opacity-85">
                 <li>
-                  Direct email inquiries on any trading topic (market structure,
-                  volume mechanics, or workflow)
+                  Continuous monitoring of active price levels based on live
+                  market structure and volume flow
                 </li>
-                <li>Structured, written responses delivered via email</li>
-                <li>Practical context based on 12 years of market experience</li>
                 <li>
-                  Strictly educational and analytical scope (not investment
-                  advice or active level management)
+                  Real-time alerts when new volume layers form ahead of the
+                  target (signaling potential reversal or early exit zones)
                 </li>
-              </ul>
-            </div>
-
-            <div class="sm:min-w-[190px] sm:pt-2">
-              <a
-                href={mailtoMC}
-                class="border-accent text-accent hover:bg-accent inline-block w-full rounded border px-4 py-2 text-center text-sm font-semibold transition-colors hover:text-black"
-              >
-                Request Consultation
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Payment Methods Note -->
-        <p class="text-xs leading-relaxed opacity-75">
-          <span class="font-semibold">Payment methods:</span> EUR (SEPA / Bank
-          Transfer) or Cryptocurrency (EUR equivalent at the time of invoice).
-        </p>
-      </section>
-
-      <section>
-        <h2 class="mb-3 text-sm font-semibold">Partnerships</h2>
-        <ul class="space-y-3 text-sm leading-relaxed">
-          <li>
-            <span class="font-medium">Research &amp; Media</span>{" "}
-            <span class="opacity-80">
-              &mdash; Analytical contributions, market mechanics breakdowns, and
-              B2B inquiries.
-            </span>
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="mb-3 text-sm font-semibold">General Inquiries</h2>
-        <p class="text-sm leading-relaxed opacity-80">
-          For partnerships or questions not covered above:
-        </p>
-        <p class="mt-2 text-sm">
-          <span class="font-semibold">Email:</span>{" "}
-          <a
-            href={`mailto:${email}`}
-            class="text-accent hover:underline"
-          >
-            {email}
-          </a>
-        </p>
-      </section>
-
-      <section class="border-border border-t pt-6">
-        <p class="text-xs leading-relaxed opacity-65">
-          All outputs represent general market research and educational analysis
-          of market mechanics. Nothing provided constitutes investment advice,
-          portfolio management, or solicitation. Paid services are not available
-          in sanctioned jurisdictions.
-        </p>
-      </section>
-    </div>
-  </Main>
-  <Footer />
-</Layout>
+                <li>
+                  Early
