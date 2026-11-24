@@ -22,7 +22,7 @@ Since trading is a solitary activity, these connections are valuable for both pa
 
 However, this should be merely a transitional phase; the less experienced trader should use this time to refine their own strategy to the point where they no longer require support from a more experienced trader.
 
-#investor #forex #crypto #forextrader #trader`,
+`,
   },
   {
     date: "23 Nov, 2026",
