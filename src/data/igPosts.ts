@@ -8,7 +8,7 @@ export interface IgPost {
 
 export const igPosts: IgPost[] = [
   {
-    date: "2026-11-24",
+    date: "24 Nov, 2026",
     image: "/ig/026-11-24.png",
     url: "https://www.instagram.com/p/DgIDvOQp6cM/",
     preview:"How higher timeframes fit a full-time work schedule.",
