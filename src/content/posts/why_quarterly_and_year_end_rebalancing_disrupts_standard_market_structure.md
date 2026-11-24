@@ -14,7 +14,7 @@ description: "Mandatory quarter-end and year-end portfolio rebalancing meets thi
 
 Some of the most expensive structural errors in retail trading happen on a predictable calendar schedule. As the financial markets move through late November and approach the end of the fourth quarter, trading conditions shift significantly. The final weeks of the year—and the closing days of every quarter—do not operate like standard trading sessions. Attempting to apply routine technical setups during these periods exposes capital to distorted market mechanics.
 
-![Quarter-End and Year-End Rebalancing vs. Order Book Depth](/ig/rebalancing.png)
+<img src="/ig/rebalancing.png" alt="Quarter-End and Year-End Rebalancing vs. Order Book Depth" style="width: 67%; height: auto; margin: 1.5rem auto; display: block;" />
 
 Tier-1 banks, hedge funds, and massive pension funds manage trillions of dollars in global assets. At the end of every month, every quarter, and especially at the close of the fiscal year in Q4, these institutions face strict operational mandates. They are required to rebalance their portfolios to maintain fixed asset allocations, such as standard equity-to-bond ratios. In addition, global funds execute year-end tax adjustments, lock in annual performance metrics, and adjust balance sheets to meet regulatory capital requirements before the new year begins.
 
