@@ -187,4 +187,133 @@ const mailtoMC = createMailto(
                   target (signaling potential reversal or early exit zones)
                 </li>
                 <li>
-                  Early
+                  Early warning when adverse volume accumulates against the
+                  level, including objective context for risk reduction (e.g.,
+                  breakeven considerations)
+                </li>
+                <li>
+                  Surrounding liquidity zones, volume context, and defined
+                  invalidation point (Stop Loss reference)
+                </li>
+                <li>
+                  Analytical guidance only; all execution and management
+                  decisions remain strictly with the client
+                </li>
+              </ul>
+            </div>
+
+            <p class="border-border mt-6 border-t pt-4 text-xs leading-relaxed italic opacity-75">
+              Based on published historical statistics, active volume-based risk
+              management has improved outcome consistency by up to 30% compared
+              to passive level holding.
+            </p>
+          </div>
+
+          <!-- Product 3: Monthly Trading Consultation -->
+          <div class="border-border flex flex-col justify-between rounded-lg border p-5">
+            <div class="space-y-4">
+              <div>
+                <p class="text-accent text-xs font-semibold tracking-wider uppercase">
+                  Monthly // Email Access
+                </p>
+                <h3 class="mt-1 text-lg font-semibold">
+                  Monthly Trading Consultation
+                </h3>
+              </div>
+
+              <p class="text-sm leading-relaxed opacity-80">
+                Direct email access for questions on any trading-related topic,
+                backed by 12 years of live market experience.
+              </p>
+
+              <div class="border-border border-y py-3">
+                <p class="text-2xl font-bold">
+                  €30 <span class="text-xs font-normal opacity-75">/ month</span>
+                </p>
+                <p class="mt-1 text-xs opacity-65">
+                  or Cryptocurrency (EUR equivalent)
+                </p>
+              </div>
+
+              <ul class="list-disc space-y-2 pl-4 text-sm leading-relaxed opacity-85">
+                <li>
+                  Direct email inquiries on any trading topic (market structure,
+                  volume mechanics, or workflow)
+                </li>
+                <li>Structured, written responses delivered via email</li>
+                <li>Practical context based on 12 years of market experience</li>
+                <li>
+                  Strictly educational and analytical scope (not investment
+                  advice or active level management)
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-6 pt-4">
+              <a
+                href={mailtoMC}
+                class="border-accent text-accent hover:bg-accent inline-block w-full rounded border px-4 py-2 text-center text-sm font-semibold transition-colors hover:text-black"
+              >
+                Request Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accepted Payment Methods Block -->
+        <div class="border-border flex flex-col items-start justify-between gap-3 rounded-lg border p-4 sm:flex-row sm:items-center">
+          <p class="text-xs font-semibold tracking-wider uppercase opacity-80">
+            Accepted Payment Methods
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="border-border rounded border px-3 py-1 text-xs font-medium opacity-90">
+              EUR (SEPA / Bank Transfer)
+            </span>
+            <span class="border-accent/60 text-accent rounded border px-3 py-1 text-xs font-medium">
+              Cryptocurrency (EUR equivalent)
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="mb-3 text-sm font-semibold">Partnerships</h2>
+        <ul class="space-y-3 text-sm leading-relaxed">
+          <li>
+            <span class="font-medium">Research &amp; Media</span>{" "}
+            <span class="opacity-80">
+              &mdash; Analytical contributions, market mechanics breakdowns, and
+              B2B inquiries.
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="mb-3 text-sm font-semibold">General Inquiries</h2>
+        <p class="text-sm leading-relaxed opacity-80">
+          For partnerships or questions not covered above:
+        </p>
+        <p class="mt-2 text-sm">
+          <span class="font-semibold">Email:</span>{" "}
+          <a
+            href={`mailto:${email}`}
+            class="text-accent hover:underline"
+          >
+            {email}
+          </a>
+        </p>
+      </section>
+
+      <section class="border-border border-t pt-6">
+        <p class="text-xs leading-relaxed opacity-65">
+          All outputs represent general market research and educational analysis
+          of market mechanics. Nothing provided constitutes investment advice,
+          portfolio management, or solicitation. Paid services are not available
+          in sanctioned jurisdictions.
+        </p>
+      </section>
+    </div>
+  </Main>
+  <Footer />
+</Layout>
