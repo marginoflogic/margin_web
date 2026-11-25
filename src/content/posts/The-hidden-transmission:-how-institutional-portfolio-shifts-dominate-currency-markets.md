@@ -15,6 +15,10 @@ Large institutional players—such as sovereign wealth funds, pension funds, and
 
 This massive capital movement explains a common market phenomenon: sustained, one-directional trends on FX charts that appear to occur without any visible macroeconomic catalysts or retail technical triggers. Retail participants analyze these trends looking for news or chart patterns, but the price is actually responding to the blunt force of capital flight and portfolio reconstruction. Because these institutional flows are large, they cannot be executed instantly without causing severe slippage. They are broken down into algorithmic slice orders and executed over days or weeks, creating persistent, trend-like behavior on higher timeframes. The volume in these trends is not looking for a quick speculative return on the currency pair itself; it is simply acquiring the currency as an operational gateway to equity and debt markets.
 
+<div class="w-full md:w-2/3 mx-auto">
+
 ![Cross-border institutional capital flow through the FX layer](../../assets/images/Cross-border-institutional-capital-flow-through-the-fX-layer.jpg)
+
+</div>
 
 The FX market absorbs this volume because it is the only liquidity pool deep enough to accommodate transactions of this scale. In contrast, digital asset markets and individual equity markets operate in comparatively shallower pools, often driven by localized sentiment and secondary trends. By the time a shift becomes visible in foreign stock indices or international assets, the primary institutional moves have already taken place on the FX level. Recognizing that FX movements precede major international asset shifts is critical for any objective market analysis. By tracking the flow of capital at this foundational level, observers can identify where global liquidity is genuinely moving, bypassing the noise of retail-focused indicators. Ultimately, the foreign exchange market is not just a trading environment—it is the structural framework that dictates the liquidity, trends, and execution capacity of every other asset class globally.
