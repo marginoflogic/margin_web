@@ -573,6 +573,12 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
             <p class="text-accent text-sm font-semibold tracking-wider uppercase">
               Order Received
             </p>
+            <div class="border-border rounded-md border px-4 py-3">
+              <p class="text-xs tracking-wider uppercase opacity-65">
+                Order Reference
+              </p>
+              <p id="order-ref-display" class="text-accent mt-1 font-mono text-lg font-bold"></p>
+            </div>
             <p class="text-base leading-relaxed opacity-85">
               Your order request has been submitted. Payment details and next
               steps will be sent to your email address shortly.
@@ -603,6 +609,7 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
     const doneBtn = document.getElementById("order-done-btn");
     const form = document.getElementById("order-form") as HTMLFormElement | null;
     const confirmation = document.getElementById("order-confirmation");
+    const refDisplay = document.getElementById("order-ref-display");
     const errorEl = document.getElementById("order-error");
     const totalEl = document.getElementById("order-total");
     const submitBtn = document.getElementById(
@@ -625,6 +632,7 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
     if (
       !form ||
       !confirmation ||
+      !refDisplay ||
       !errorEl ||
       !totalEl ||
       !submitBtn ||
@@ -638,6 +646,15 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
     ) {
       return;
     }
+
+    const generateOrderId = () => {
+      const now = new Date();
+      const yy = String(now.getFullYear()).slice(-2);
+      const mm = String(now.getMonth() + 1).padStart(2, "0");
+      const dd = String(now.getDate()).padStart(2, "0");
+      const rand = String(Math.floor(1000 + Math.random() * 9000));
+      return `${yy}${mm}${dd}-${rand}`;
+    };
 
     const getSelectedDuration = () => {
       const checked = form.querySelector<HTMLInputElement>(
@@ -738,23 +755,23 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
 
       if (cbSAL.checked) {
         codes.push("SAL");
-        items.push("Single Active Level (€100 / one-time)");
+        items.push("- Single Active Level — €100 / one-time");
         total += 100;
       }
       if (cb30PC.checked) {
         const { price, label } = getSelectedDuration();
         codes.push("30PC");
-        items.push(`Continuous 30-Pair Coverage (€${price} / ${label})`);
+        items.push(`- Continuous 30-Pair Coverage — €${price} / ${label}`);
         total += price;
       }
       if (cbALM.checked) {
         codes.push("ALM");
-        items.push("Active Level Management & Risk Support (+€50 / selected plan)");
+        items.push("- Active Level Management & Risk Support — +€50 / selected plan");
         total += 50;
       }
       if (cbMC.checked) {
         codes.push("MC");
-        items.push("Monthly Trading Consultation (€30 / month)");
+        items.push("- Monthly Trading Consultation — €30 / month");
         total += 30;
       }
 
@@ -777,12 +794,15 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
       submitBtn.textContent = "Submitting...";
       errorEl.classList.add("hidden");
 
+      const orderId = generateOrderId();
+
       const payload = {
         access_key: accessKey,
-        subject: `Order_${codes.join("+")}`,
+        subject: `Order #${orderId} | ${codes.join("+")}`,
         from_name: "Margin of Logic Order",
+        order_id: orderId,
         email: emailInput.value.trim(),
-        services: items.join(" | "),
+        services: items.join("\n"),
         total: `€${total}`,
         payment_currency: currencyRadio.value,
         botcheck: botcheckInput?.checked ?? false,
@@ -800,6 +820,7 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
 
         const result = await response.json();
         if (response.ok && result.success) {
+          refDisplay.textContent = `#${orderId}`;
           form.classList.add("hidden");
           confirmation.classList.remove("hidden");
         } else {
