@@ -8,6 +8,25 @@ export interface IgPost {
 
 export const igPosts: IgPost[] = [
   {
+    date: "25 Nov, 2026",
+    image: "/ig/26-11-25.png",
+    url: "https://www.instagram.com/p/DgKxZnIJVRe/",
+    preview:"A good trade entry is only half the work",
+    moreText: `Finding a good price level to enter a trade is only the first step of the process. In both forex and crypto markets, most retail accounts do not lose money because every entry is wrong. Losses happen far more often because there is no clear plan for managing the position once the order is open.
+
+A market does not stay the same after an order fills. Between the entry and the final target, new volume enters the market, trading sessions change, and fresh economic data shifts price direction. A setup that looked clear on Monday morning can lose its logic by Tuesday afternoon. Leaving every open trade alone without review exposes capital to avoidable losses.
+
+Unmanaged trades usually fail in two simple ways. First, a trade moves halfway toward the take-profit target, reverses due to new market volume, and hits the original stop-loss. A position that showed real profit turns into a full loss simply because risk was never lowered. Second, traders often move a stop-loss to break-even far too early, before price confirms a new structure. Normal price swings then close the trade at zero right before price moves directly to the original target.
+
+Active trade management solves both problems with clear, practical rules. It defines exactly when to lower risk, when to move a stop-loss to break-even, when to take partial profit, and when to close a trade early if market conditions change. Watching how price reacts at key levels after entry allows a trader to protect gains instead of waiting for a fixed outcome. Real trading results consistently confirm that active management makes a major difference in win-rate stability and account protection.
+
+Tracking live volume and changing price levels takes daily focus and practical experience.
+
+Pairing well-selected entry levels with structured, ongoing trade management support is what turns individual setups into reliable long-term performance.
+
+`,
+  },
+  {
     date: "24 Nov, 2026",
     image: "/ig/026-11-24.png",
     url: "https://www.instagram.com/p/DgIDvOQp6cM/",
