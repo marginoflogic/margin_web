@@ -19,8 +19,6 @@ const t = useTranslations(locale);
 
 const posts = await getCollection("posts");
 const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 const homePath = getRelativeLocaleUrl(locale, "");
 const latestIgPosts = igPosts.slice(0, 3);
 ---
@@ -43,34 +41,13 @@ const latestIgPosts = igPosts.slice(0, 3);
       <!-- Ľavý stĺpec: Články a mesačné vyhodnotenia (2/3 šírky) -->
       <div class="lg:col-span-2">
         {
-          featuredPosts.length > 0 && (
-            <section
-              id="featured"
-              class:list={[
-                "pb-6",
-                { "border-border border-b": recentPosts.length > 0 },
-              ]}
-            >
-              <h2 class="text-2xl font-semibold tracking-wide">
-                {t.home.featured}
-              </h2>
-              <ul>
-                {featuredPosts.map(data => (
-                  <Card variant="h3" {...data} />
-                ))}
-              </ul>
-            </section>
-          )
-        }
-
-        {
-          recentPosts.length > 0 && (
-            <section id="recent-posts" class="pt-8 pb-6">
+          sortedPosts.length > 0 && (
+            <section id="recent-posts" class="pb-6">
               <h2 class="text-2xl font-semibold tracking-wide">
                 {t.home.recentPosts}
               </h2>
               <ul>
-                {recentPosts.slice(0, postsConfig.perIndex).map(data => (
+                {sortedPosts.slice(0, postsConfig.perIndex).map(data => (
                   <Card variant="h3" {...data} />
                 ))}
               </ul>
@@ -86,7 +63,7 @@ const latestIgPosts = igPosts.slice(0, 3);
         </div>
       </div>
 
-    <!-- Pravý stĺpec: Instagram Reels feed (1/3 šírky) -->
+      <!-- Pravý stĺpec: Instagram Reels feed (1/3 šírky) -->
       <aside class="border-border border-t pt-8 lg:border-t-0 lg:border-s lg:ps-8 lg:pt-0">
         <h2 class="mb-6 text-2xl font-semibold tracking-wide">
           Instagram Reels
@@ -107,7 +84,7 @@ const latestIgPosts = igPosts.slice(0, 3);
                     alt="Instagram Reel Hook Slide"
                     class="aspect-[9/16] w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                <div class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/15 transition-colors duration-300 group-hover:bg-black/30">
+                  <div class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/15 transition-colors duration-300 group-hover:bg-black/30">
                     <div class="flex size-12 items-center justify-center rounded-full bg-black/65 text-white shadow-lg backdrop-blur-xs transition-transform duration-300 group-hover:scale-110">
                       <svg
                         viewBox="0 0 24 24"
