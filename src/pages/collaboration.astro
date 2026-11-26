@@ -568,22 +568,56 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
         </form>
 
         <!-- Confirmation State -->
-        <div id="order-confirmation" class="hidden space-y-6 py-8">
-          <div class="space-y-3">
+        <div id="order-confirmation" class="hidden space-y-6 py-4">
+          <div class="space-y-4">
             <p class="text-accent text-sm font-semibold tracking-wider uppercase">
               Order Received
             </p>
+
             <div class="border-border rounded-md border px-4 py-3">
               <p class="text-xs tracking-wider uppercase opacity-65">
                 Order Reference
               </p>
               <p id="order-ref-display" class="text-accent mt-1 font-mono text-lg font-bold"></p>
             </div>
-            <p class="text-base leading-relaxed opacity-85">
-              Your order request has been submitted. Payment details and next
-              steps will be sent to your email address shortly.
+
+            <p class="text-sm leading-relaxed opacity-85">
+              Thank you for your order. Your request has been logged. Payment
+              instructions and onboarding details will be sent to your email
+              address within 24 hours.
+            </p>
+
+            <!-- Separated Order Summary -->
+            <div class="border-border space-y-3 border-y py-4">
+              <p class="text-xs font-semibold tracking-wider uppercase opacity-75">
+                Order Summary
+              </p>
+              <div class="space-y-1.5">
+                <p class="text-xs font-medium opacity-70">Selected Services:</p>
+                <ul
+                  id="order-summary-services"
+                  class="list-disc space-y-1 pl-5 text-sm leading-relaxed opacity-90"
+                ></ul>
+              </div>
+              <div class="border-border flex items-baseline justify-between border-t pt-3">
+                <span class="text-xs font-semibold tracking-wider uppercase opacity-75">
+                  Total Amount
+                </span>
+                <span id="order-summary-total" class="text-lg font-bold"></span>
+              </div>
+            </div>
+
+            <p class="text-sm leading-relaxed opacity-85">
+              Please keep your Order Reference for all payment and email
+              correspondence.
+            </p>
+
+            <p class="text-sm leading-relaxed opacity-85">
+              Best regards,<br />
+              Margin of Logic Team
             </p>
           </div>
+
           <button
             type="button"
             id="order-done-btn"
@@ -610,6 +644,8 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
     const form = document.getElementById("order-form") as HTMLFormElement | null;
     const confirmation = document.getElementById("order-confirmation");
     const refDisplay = document.getElementById("order-ref-display");
+    const summaryServicesEl = document.getElementById("order-summary-services");
+    const summaryTotalEl = document.getElementById("order-summary-total");
     const errorEl = document.getElementById("order-error");
     const totalEl = document.getElementById("order-total");
     const submitBtn = document.getElementById(
@@ -633,6 +669,8 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
       !form ||
       !confirmation ||
       !refDisplay ||
+      !summaryServicesEl ||
+      !summaryTotalEl ||
       !errorEl ||
       !totalEl ||
       !submitBtn ||
@@ -821,6 +859,13 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
         const result = await response.json();
         if (response.ok && result.success) {
           refDisplay.textContent = `#${orderId}`;
+          summaryServicesEl.innerHTML = "";
+          items.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item.replace(/^- /, "");
+            summaryServicesEl.appendChild(li);
+          });
+          summaryTotalEl.textContent = `€${total}`;
           form.classList.add("hidden");
           confirmation.classList.remove("hidden");
         } else {
