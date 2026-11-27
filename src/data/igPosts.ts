@@ -7,6 +7,25 @@ export interface IgPost {
 }
 
 export const igPosts: IgPost[] = [
+    {
+    date: "27 Nov, 2026",
+    image: "/ig/26-11-27.png",
+    url: "https://www.instagram.com/p/DgPgtVzJPBc/",
+    preview:"Focusing on a single instrument limits real setups.",
+    moreText: `A large portion of retail traders focus all attention on a single popular instrument—for example, EUR/USD, BTC, or Gold. Watching just one instrument initially seems simpler to manage. In practice, this narrow focus is a major mechanical reason why retail accounts lose money consistently.
+
+No single financial instrument produces clear institutional volume every day. Individual instruments, for example EUR/USD, BTC, or Gold, spend much of every week moving sideways or trading in unclear ranges. When a trader monitors only one or two instruments, ordinary price swings begin to look like setups. Trades get opened where no large banks or funds are active, exposing accounts to wider spreads and repeated stop-loss hits.
+
+Expanding the focus from a single instrument to a broader market removes this structural limit. In a wide market—for example, forex—there are as many opportunities as there are currency pairs. Different pairs reflect different economies, central bank policies, and global capital flows. When one instrument moves sideways, institutional volume is often creating a clear price imbalance on another pair at the same time.
+
+Professional execution never tries to force trades out of one quiet instrument. Instead, a structured trading strategy scans multiple instruments and filters out unclear price action. Only instruments with real institutional volume and exact price levels are selected for execution.
+
+Scanning a broad market consistently takes a clear method, daily capacity, and tested rules. Reliable, publicly documented trading statistics are not built by forcing setups on one instrument every day.
+
+They come from filtering wider markets, skipping weak conditions, and acting only when real volume matches defined levels.
+
+`,
+  },
   {
     date: "25 Nov, 2026",
     image: "/ig/26-11-25.png",
