@@ -27,12 +27,15 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
                 <p class="text-accent text-xs font-semibold tracking-wider uppercase">
                   One-Time // Single Level
                 </p>
-                <h3 class="mt-1 text-lg font-semibold">Single Active Level</h3>
+                <h3 class="mt-1 text-lg font-semibold">
+                  Single Active Level (SAL)
+                </h3>
               </div>
 
               <p class="text-sm leading-relaxed opacity-80">
-                One-time structural analysis of a single active price level
-                based on current market structure and volume flow.
+                A single, standalone institutional price level identified
+                through volume and liquidity mechanics, delivered without an
+                ongoing subscription.
               </p>
 
               <div class="border-border border-y py-3">
@@ -45,16 +48,47 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
               </div>
 
               <ul class="list-disc space-y-2 pl-4 text-sm leading-relaxed opacity-85">
-                <li>Defined active price level based on current market structure</li>
-                <li>Surrounding liquidity zones and volume context</li>
                 <li>
-                  Defined invalidation point (Stop Loss reference) and target
-                  zone (Take Profit reference)
+                  <strong class="font-semibold">Level Delivery (upon formation / within 24 hours):</strong>{" "}
+                  Upon payment confirmation, you receive one non-public price
+                  level as soon as a valid setup forms (or within 24 hours if a
+                  valid level is already open), delivered as a separate email
+                  containing:
+                  <ul class="mt-1.5 list-['–_'] space-y-1 pl-4 text-xs opacity-90">
+                    <li>Instrument / Pair</li>
+                    <li>Direction</li>
+                    <li>Active Level (Entry Ref.)</li>
+                    <li>Invalidation (SL Ref.)</li>
+                    <li>Target Zone (TP Ref.)</li>
+                    <li>Risk-to-Reward (RRR)</li>
+                    <li>Expected Horizon</li>
+                    <li>Issued / Distance</li>
+                    <li>Liquidity &amp; Volume Context</li>
+                    <li>Chart Snapshot</li>
+                  </ul>
                 </li>
-                <li>Price level alert notifications</li>
+                <li>
+                  <strong class="font-semibold">Price Proximity Alert:</strong>{" "}
+                  Email notification when the market approaches within 50–70
+                  pips of the active level.
+                </li>
+                <li>
+                  <strong class="font-semibold">Pre-Entry Invalidation &amp; Automatic Replacement:</strong>{" "}
+                  If the level is invalidated prior to entry due to changes in
+                  market structure, a replacement level is issued automatically
+                  at no additional cost.
+                </li>
+                <li>
+                  <strong class="font-semibold">Service Completion:</strong>{" "}
+                  The service concludes once the Target Zone (TP Ref.) or
+                  Invalidation (SL Ref.) is reached. Client-initiated early
+                  exits or manual adjustments do not alter service completion.
+                </li>
                 <li class="opacity-75">
-                  Static analytical output only; active level management is
-                  available as an add-on
+                  <strong class="font-semibold">Active Level Management &amp; Risk Support (Excluded / Recommended Add-On):</strong>{" "}
+                  Not included in base delivery. Recommended for continuous
+                  volume-flow monitoring, early-exit context, and real-time risk
+                  adjustments throughout the level's lifecycle.
                 </li>
               </ul>
             </div>
@@ -75,16 +109,17 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
             <div class="space-y-4">
               <div>
                 <p class="text-accent text-xs font-semibold tracking-wider uppercase">
-                  Subscription // 30 FX Pairs
+                  Fixed Term // 30 FX Pairs
                 </p>
                 <h3 class="mt-1 text-lg font-semibold">
-                  Continuous 30-Pair Coverage
+                  Continuous 30-Pair Coverage (30PC)
                 </h3>
               </div>
 
               <p class="text-sm leading-relaxed opacity-80">
-                Ongoing structural analysis and active price levels across 30
-                monitored FX pairs.
+                Ongoing structural market coverage across 30 monitored currency
+                pairs, driven strictly by institutional volume and liquidity
+                mechanics.
               </p>
 
               <div class="border-border border-y py-3">
@@ -110,19 +145,51 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
               </div>
 
               <ul class="list-disc space-y-2 pl-4 text-sm leading-relaxed opacity-85">
-                <li>Continuous coverage of 30 FX pairs across higher timeframes</li>
                 <li>
-                  Active price levels with surrounding liquidity zones and
-                  volume context
+                  <strong class="font-semibold">Initial Load (within 24 hours):</strong>{" "}
+                  Upon payment confirmation, you receive a summary of all
+                  currently valid, non-public price levels across the 30
+                  monitored pairs. The number of levels depends strictly on
+                  current market conditions and volume—no fixed count is
+                  guaranteed.
                 </li>
                 <li>
-                  Defined invalidation points (Stop Loss references) and target
-                  zones (Take Profit references)
+                  <strong class="font-semibold">Individual Level Delivery:</strong>{" "}
+                  Throughout your coverage period, every newly formed,
+                  non-public price level is delivered immediately as a separate
+                  email containing:
+                  <ul class="mt-1.5 list-['–_'] space-y-1 pl-4 text-xs opacity-90">
+                    <li>Instrument / Pair</li>
+                    <li>Direction</li>
+                    <li>Active Level (Entry Ref.)</li>
+                    <li>Invalidation (SL Ref.)</li>
+                    <li>Target Zone (TP Ref.)</li>
+                    <li>Risk-to-Reward (RRR)</li>
+                    <li>Expected Horizon</li>
+                    <li>Issued / Distance</li>
+                    <li>Liquidity &amp; Volume Context</li>
+                    <li>Chart Snapshot</li>
+                  </ul>
                 </li>
-                <li>Price level alert notifications</li>
+                <li>
+                  <strong class="font-semibold">Price Proximity Alerts:</strong>{" "}
+                  Email notification when the market approaches within 50–70
+                  pips of any active level.
+                </li>
+                <li>
+                  <strong class="font-semibold">Pre-Entry Invalidation Notices:</strong>{" "}
+                  Immediate email notification if a level is invalidated prior
+                  to entry due to changes in market structure.
+                </li>
+                <li>
+                  <strong class="font-semibold">Expiration Notice:</strong>{" "}
+                  Automated reminder 7 days before the end of your fixed term.
+                </li>
                 <li class="opacity-75">
-                  Static analytical output only; active level management is
-                  available as an add-on
+                  <strong class="font-semibold">Active Level Management &amp; Risk Support (Excluded / Recommended Add-On):</strong>{" "}
+                  Not included in base coverage. Recommended for continuous
+                  volume-flow monitoring, early-exit context, and real-time risk
+                  adjustments throughout each level's lifecycle.
                 </li>
               </ul>
             </div>
@@ -146,22 +213,24 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
             <div class="space-y-4">
               <div>
                 <p class="text-accent text-xs font-semibold tracking-wider uppercase">
-                  Optional Add-On // For Both Level Plans
+                  Optional Add-On // For SAL &amp; 30PC
                 </p>
                 <h3 class="mt-1 text-lg font-semibold">
-                  Active Level Management &amp; Risk Support
+                  Active Level Management &amp; Risk Support (ALM)
                 </h3>
               </div>
 
               <p class="text-sm leading-relaxed opacity-80">
-                Ongoing analytical guidance for your active price levels,
-                continuing throughout their entire lifecycle until closure. Flat
-                fee covering all active levels within your chosen plan.
+                Event-driven analytical risk support covering your active base
+                service, focused on order-flow shifts and structural protection.
               </p>
 
               <div class="border-border border-y py-3">
                 <p class="text-2xl font-bold">
-                  + €50 <span class="text-xs font-normal opacity-75">/ selected plan</span>
+                  +€50{" "}
+                  <span class="text-xs font-normal opacity-75">
+                    / one-time add-on (applies to SAL or full 30PC term)
+                  </span>
                 </p>
                 <p class="mt-1 text-xs opacity-65">
                   or Cryptocurrency (EUR equivalent)
@@ -170,26 +239,36 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
 
               <ul class="list-disc space-y-2 pl-4 text-sm leading-relaxed opacity-85">
                 <li>
-                  Continuous monitoring of active price levels based on live
-                  market structure and volume flow
+                  <strong class="font-semibold">Scope &amp; Activation:</strong>{" "}
+                  Available as a standalone add-on to either Single Active Level
+                  (SAL) or Continuous 30-Pair Coverage (30PC). Covers the base
+                  product as a whole (the active SAL level or all active levels
+                  within your 30PC fixed term), regardless of level count. Can
+                  be ordered at any time; activates upon payment confirmation.
                 </li>
                 <li>
-                  Real-time alerts when new volume layers form ahead of the
-                  target (signaling potential reversal or early exit zones)
+                  <strong class="font-semibold">Event-Driven Updates:</strong>{" "}
+                  Immediate email notifications are distributed strictly when a
+                  structural or volume-flow shift occurs that may negatively
+                  affect an open position (such as risk reduction, SL
+                  adjustments, or early-exit context). Routine status updates
+                  without structural changes are not included in this service.
                 </li>
                 <li>
-                  Early warning when adverse volume accumulates against the
-                  level, including objective context for risk reduction (e.g.,
-                  breakeven considerations)
+                  <strong class="font-semibold">Communication Format:</strong>{" "}
+                  Analytical updates delivered via no-reply email. For active
+                  consultation across various trading topics, we recommend
+                  purchasing Monthly Trading Consultation (MC).
                 </li>
                 <li>
-                  Surrounding liquidity zones, volume context, defined
-                  invalidation point (Stop Loss reference), and target zone
-                  (Take Profit reference)
-                </li>
-                <li>
-                  Analytical guidance only; all execution and management
-                  decisions remain strictly with the client
+                  <strong class="font-semibold">Service Completion &amp; Continuity:</strong>{" "}
+                  Concludes automatically upon reaching the Target Zone (TP
+                  Ref.), Invalidation (SL Ref.), structural early-exit (for
+                  SAL), or expiration of the underlying 30PC fixed term.
+                  Client-initiated early exits or manual adjustments do not
+                  alter service completion. If a SAL level is invalidated prior
+                  to entry, ALM transfers automatically to the replacement
+                  level.
                 </li>
               </ul>
 
@@ -216,21 +295,21 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
             <div class="space-y-4">
               <div>
                 <p class="text-accent text-xs font-semibold tracking-wider uppercase">
-                  Monthly // Email Access
+                  30 Days // Interactive Email
                 </p>
                 <h3 class="mt-1 text-lg font-semibold">
-                  Monthly Trading Consultation
+                  Monthly Trading Consultation (MC)
                 </h3>
               </div>
 
               <p class="text-sm leading-relaxed opacity-80">
-                Direct email access for questions on any trading-related topic,
-                backed by 12 years of live market experience.
+                Interactive email communication focused on market mechanics,
+                volume and order-flow, risk management, and position reviews.
               </p>
 
               <div class="border-border border-y py-3">
                 <p class="text-2xl font-bold">
-                  €30 <span class="text-xs font-normal opacity-75">/ month</span>
+                  €30 <span class="text-xs font-normal opacity-75">/ 30 days</span>
                 </p>
                 <p class="mt-1 text-xs opacity-65">
                   or Cryptocurrency (EUR equivalent)
@@ -239,14 +318,27 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
 
               <ul class="list-disc space-y-2 pl-4 text-sm leading-relaxed opacity-85">
                 <li>
-                  Direct email inquiries on any trading topic (market structure,
-                  volume mechanics, or workflow)
+                  <strong class="font-semibold">Format &amp; Response Time:</strong>{" "}
+                  Interactive email communication, active from payment
+                  confirmation until expiration. No fixed limit on the number of
+                  emails or topics; guaranteed response within 24 hours.
                 </li>
-                <li>Structured, written responses delivered via email</li>
-                <li>Practical context based on 12 years of market experience</li>
                 <li>
-                  Strictly educational and analytical scope (not investment
-                  advice or active level management)
+                  <strong class="font-semibold">Scope &amp; Exclusions:</strong>{" "}
+                  Covers market mechanics, volume and order-flow, risk
+                  management, and reviews of client positions. Level-specific
+                  consultations apply exclusively to levels issued by Margin of
+                  Logic—analysis of client-created or third-party levels is not
+                  included. This service does not include the delivery of new
+                  entry levels beyond active SAL or 30PC services.
+                </li>
+                <li>
+                  <strong class="font-semibold">Term &amp; Expiration:</strong>{" "}
+                  Fixed 30-day term without automatic renewal. Expires
+                  automatically after 30 days regardless of any other active
+                  services (does not align with 3/6/12-month 30PC terms). An
+                  expiration reminder is sent 7 days prior to the end of the
+                  term; continued access requires a new standalone order.
                 </li>
               </ul>
             </div>
@@ -261,6 +353,17 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
               </button>
             </div>
           </div>
+        </div>
+
+        <!-- Distribution & Client Responsibility Notice -->
+        <div class="border-border rounded-lg border p-4">
+          <p class="text-xs leading-relaxed opacity-80">
+            This analysis is distributed to a limited number of clients. Keeping
+            these parameters private protects execution quality and preserves
+            your structural edge around the level. Position sizing and the
+            concurrent management of multiple active positions remain strictly
+            within the client's responsibility.
+          </p>
         </div>
 
         <!-- Accepted Currencies Block -->
@@ -372,7 +475,9 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
                   class="accent-accent mt-1 size-4 cursor-pointer"
                 />
                 <div>
-                  <span class="block text-base font-medium">Single Active Level</span>
+                  <span class="block text-base font-medium">
+                    Single Active Level (SAL)
+                  </span>
                   <span class="block text-xs opacity-65">One-time analysis</span>
                 </div>
               </div>
@@ -393,10 +498,10 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
                   />
                   <div>
                     <span class="block text-base font-medium">
-                      Continuous 30-Pair Coverage
+                      Continuous 30-Pair Coverage (30PC)
                     </span>
                     <span class="block text-xs opacity-65">
-                      Ongoing 30 FX pairs subscription
+                      Ongoing 30 FX pairs coverage
                     </span>
                   </div>
                 </div>
@@ -461,15 +566,15 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
                 />
                 <div>
                   <span class="block text-base font-medium">
-                    Active Level Management &amp; Risk Support
+                    Active Level Management &amp; Risk Support (ALM)
                   </span>
                   <span class="block text-xs opacity-65">
-                    Optional add-on for level plans
+                    Optional add-on for SAL or full 30PC term
                   </span>
                 </div>
               </div>
               <span class="text-base font-semibold whitespace-nowrap">
-                +€50 <span class="text-xs font-normal opacity-75">/ selected plan</span>
+                +€50 <span class="text-xs font-normal opacity-75">/ one-time add-on</span>
               </span>
             </label>
 
@@ -484,15 +589,15 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
                 />
                 <div>
                   <span class="block text-base font-medium">
-                    Monthly Trading Consultation
+                    Monthly Trading Consultation (MC)
                   </span>
                   <span class="block text-xs opacity-65">
-                    Direct email access
+                    Interactive email communication
                   </span>
                 </div>
               </div>
               <span class="text-base font-semibold whitespace-nowrap">
-                €30 <span class="text-xs font-normal opacity-75">/ month</span>
+                €30 <span class="text-xs font-normal opacity-75">/ 30 days</span>
               </span>
             </label>
           </fieldset>
@@ -793,23 +898,23 @@ const web3formsKey = "71b2cd72-5c28-4670-8e08-ac201aaf5fff";
 
       if (cbSAL.checked) {
         codes.push("SAL");
-        items.push("- Single Active Level — €100 / one-time");
+        items.push("- Single Active Level (SAL) — €100 / one-time");
         total += 100;
       }
       if (cb30PC.checked) {
         const { price, label } = getSelectedDuration();
         codes.push("30PC");
-        items.push(`- Continuous 30-Pair Coverage — €${price} / ${label}`);
+        items.push(`- Continuous 30-Pair Coverage (30PC) — €${price} / ${label}`);
         total += price;
       }
       if (cbALM.checked) {
         codes.push("ALM");
-        items.push("- Active Level Management & Risk Support — +€50 / selected plan");
+        items.push("- Active Level Management & Risk Support (ALM) — +€50 / one-time add-on");
         total += 50;
       }
       if (cbMC.checked) {
         codes.push("MC");
-        items.push("- Monthly Trading Consultation — €30 / month");
+        items.push("- Monthly Trading Consultation (MC) — €30 / 30 days");
         total += 30;
       }
 
